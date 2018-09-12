@@ -17,11 +17,11 @@ https://github.com/shuleyu/CPP-Library/blob/master/Examples/Tomography.cpp
 Here are details about download sources and convertions to these nc files:
 
 1. GyPSum_S.nc
-Download link: http://ds.iris.edu/spud/earthmodel/10131119
-(netCDF binary of S velocity expressed as km/s)
-Paper doi:10.1029/2010JB007631
+Paper        : doi:10.1029/2010JB007631
+Download link: http://ds.iris.edu/spud/earthmodel/10131119 (netCDF binary of S velocity expressed as km/s)
+Changes      : rename variable "vs" to "v".
 
 2. GyPSum_P.nc
-Download link: http://ds.iris.edu/spud/earthmodel/10131119
-(netCDF binary of P velocity expressed as km/s)
-Paper doi:10.1029/2010JB007631
+Paper        : doi:10.1029/2010JB007631
+Download link: http://ds.iris.edu/spud/earthmodel/10131119 (netCDF binary of P velocity expressed as km/s)
+Changes      : rename variable "vp" to "v".
