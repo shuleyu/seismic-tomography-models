@@ -47,3 +47,23 @@ Changes      : convert the ascii file into nc file, rename variable "dvp" to "v"
 Paper        : doi:10.1029/2007GC001806\
 Download link: https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2007GC001806&file=ggge1202-sup-0002-ds01.txt.gz
 Changes      : convert dvp into vp using ak135 reference model and create this nc file in which "v" representing "vp, km/s", see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_MITP08_vp.cpp
+
+7. SAW642AN_vs.nc\
+Paper        : doi:10.1111/j.1365-246X.2006.03100.x\
+Download link: http://ds.iris.edu/spud/earthmodel/10131202 (the netCDF binary for the above model expressed in km/s.)\
+Changes      : lose variables "vp", "rho", "Qs", rename variable "vs" to "v".
+
+8. SAW642AN_vp.nc\
+Paper        : doi:10.1111/j.1365-246X.2006.03100.x\
+Download link: http://ds.iris.edu/spud/earthmodel/10131202 (the netCDF binary for the above model expressed in km/s.)\
+Changes      : lose variables "vs", "rho", "Qs", rename variable "vp" to "v".
+
+9. SAW642AN_rho.nc\
+Paper        : doi:10.1111/j.1365-246X.2006.03100.x\
+Download link: http://ds.iris.edu/spud/earthmodel/10131202 (the netCDF binary for the above model expressed in km/s.)\
+Changes      : lose variables "vs", "vp", "Qs", rename variable "rho" to "v".
+
+10. SAW642AN_qs.nc\
+Paper        : doi:10.1111/j.1365-246X.2006.03100.x\
+Download link: http://ds.iris.edu/spud/earthmodel/10131202 (the netCDF binary for the above model expressed in km/s.)\
+Changes      : lose variables "vs", "vp", "rho", rename variable "Qs" to "v".
