@@ -12,7 +12,7 @@ http://ds.iris.edu/spud/earthmodel\
 Others are downloaded from links in papers or from authors' websites and etc.
 
 The c++ tool to read and linear interpolate between values are provided in this file:\
-https://github.com/shuleyu/CPP-Library/blob/master/Tomography.hpp\
+https://github.com/shuleyu/CPP-Library/blob/master/Tomography.hpp  
 Example program is:\
 https://github.com/shuleyu/CPP-Library/blob/master/Examples/Tomography.cpp
 
