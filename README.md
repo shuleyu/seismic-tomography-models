@@ -50,60 +50,75 @@ Changes      : convert dvp into vp using ak135 reference model and create this n
 
 7. SAW642AN_vs.nc\
 Paper        : doi:10.1111/j.1365-246X.2006.03100.x\
-Download link: http://ds.iris.edu/spud/earthmodel/10131202 (the netCDF binary for the above model expressed in km/s.)\
+Download link: http://ds.iris.edu/spud/earthmodel/10131202 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vp", "rho", "Qs", rename variable "vs" to "v".
 
 8. SAW642AN_vp.nc\
 Paper        : doi:10.1111/j.1365-246X.2006.03100.x\
-Download link: http://ds.iris.edu/spud/earthmodel/10131202 (the netCDF binary for the above model expressed in km/s.)\
+Download link: http://ds.iris.edu/spud/earthmodel/10131202 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vs", "rho", "Qs", rename variable "vp" to "v".
 
 9. SAW642AN_rho.nc\
 Paper        : doi:10.1111/j.1365-246X.2006.03100.x\
-Download link: http://ds.iris.edu/spud/earthmodel/10131202 (the netCDF binary for the above model expressed in km/s.)\
+Download link: http://ds.iris.edu/spud/earthmodel/10131202 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vs", "vp", "Qs", rename variable "rho" to "v".
 
 10. SAW642AN_qs.nc\
 Paper        : doi:10.1111/j.1365-246X.2006.03100.x\
-Download link: http://ds.iris.edu/spud/earthmodel/10131202 (the netCDF binary for the above model expressed in km/s.)\
+Download link: http://ds.iris.edu/spud/earthmodel/10131202 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vs", "vp", "rho", rename variable "Qs" to "v".
 
 11. SAW642ANb_vs.nc\
 Paper        : doi:10.1029/2010JB007520\
-Download link: http://ds.iris.edu/spud/earthmodel/10131193 (the netCDF binary for the above model expressed in km/s.)\
+Download link: http://ds.iris.edu/spud/earthmodel/10131193 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vp", "rho", "Qs", rename variable "vs" to "v".
 
 12. SAW642ANb_vp.nc\
 Paper        : doi:10.1029/2010JB007520\
-Download link: http://ds.iris.edu/spud/earthmodel/10131193 (the netCDF binary for the above model expressed in km/s.)\
+Download link: http://ds.iris.edu/spud/earthmodel/10131193 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vs", "rho", "Qs", rename variable "vp" to "v".
 
 13. SAW642ANb_rho.nc\
 Paper        : doi:10.1029/2010JB007520\
-Download link: http://ds.iris.edu/spud/earthmodel/10131193 (the netCDF binary for the above model expressed in km/s.)\
+Download link: http://ds.iris.edu/spud/earthmodel/10131193 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vs", "vp", "Qs", rename variable "rho" to "v".
 
 14. SAW642ANb_qs.nc\
 Paper        : doi:10.1029/2010JB007520\
-Download link: http://ds.iris.edu/spud/earthmodel/10131193 (the netCDF binary for the above model expressed in km/s.)\
+Download link: http://ds.iris.edu/spud/earthmodel/10131193 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vs", "vp", "rho", rename variable "Qs" to "v".
 
 15. SAW24B16_vs.nc\
 Paper        : doi:10.17611/DP/10131184\
-Download link: http://ds.iris.edu/spud/earthmodel/10131184 (The netCDF binary for the above 2°x2° model expressed as S-velocity in km/s.)\
+Download link: http://ds.iris.edu/spud/earthmodel/10131184 (The netCDF binary for the above 2°x2° model expressed as S-velocity in km/s)\
 Changes      : rename variable "vsh" to "v".
 
 16. S362ANI_vs.nc\
 Paper        : doi:10.1029/2007JB005169\
-Download link: http://ds.iris.edu/spud/earthmodel/10131231 (the netCDF binary for the above model expressed in km/s.)\
+Download link: http://ds.iris.edu/spud/earthmodel/10131231 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vsv", "vsh", rename variable "vs" to "v".
 
 17. S362ANI_vsv.nc\
 Paper        : doi:10.1029/2007JB005169\
-Download link: http://ds.iris.edu/spud/earthmodel/10131231 (the netCDF binary for the above model expressed in km/s.)\
+Download link: http://ds.iris.edu/spud/earthmodel/10131231 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vs", "vsh", rename variable "vsv" to "v".
 
 18. S362ANI_vsh.nc\
 Paper        : doi:10.1029/2007JB005169\
-Download link: http://ds.iris.edu/spud/earthmodel/10131231 (the netCDF binary for the above model expressed in km/s.)\
+Download link: http://ds.iris.edu/spud/earthmodel/10131231 (the netCDF binary for the above model expressed in km/s)\
+Changes      : lose variables "vs", "vsv", rename variable "vsh" to "v".
+
+19. S362ANI+M_vs.nc\
+Paper        : doi:10.1093/gji/ggu356\
+Download link: http://ds.iris.edu/spud/earthmodel/10131294 (the netCDF binary for the above model expressed in km/s)\
+Changes      : lose variables "vsv", "vsh", rename variable "vs" to "v".
+
+20. S362ANI+M_vsv.nc\
+Paper        : doi:10.1093/gji/ggu356\
+Download link: http://ds.iris.edu/spud/earthmodel/10131294 (the netCDF binary for the above model expressed in km/s)\
+Changes      : lose variables "vs", "vsh", rename variable "vsv" to "v".
+
+21. S362ANI+M_vsh.nc\
+Paper        : doi:10.1093/gji/ggu356\
+Download link: http://ds.iris.edu/spud/earthmodel/10131294 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vs", "vsv", rename variable "vsh" to "v".
