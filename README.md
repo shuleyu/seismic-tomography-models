@@ -92,3 +92,18 @@ Changes      : lose variables "vs", "vp", "rho", rename variable "Qs" to "v".
 Paper        : doi:10.17611/DP/10131184\
 Download link: http://ds.iris.edu/spud/earthmodel/10131184 (The netCDF binary for the above 2°x2° model expressed as S-velocity in km/s.)\
 Changes      : rename variable "vsh" to "v".
+
+16. S362ANI_vs.nc\
+Paper        : doi:10.1029/2007JB005169\
+Download link: http://ds.iris.edu/spud/earthmodel/10131231 (the netCDF binary for the above model expressed in km/s.)\
+Changes      : lose variables "vsv", "vsh", rename variable "vs" to "v".
+
+17. S362ANI_vsv.nc\
+Paper        : doi:10.1029/2007JB005169\
+Download link: http://ds.iris.edu/spud/earthmodel/10131231 (the netCDF binary for the above model expressed in km/s.)\
+Changes      : lose variables "vs", "vsh", rename variable "vsv" to "v".
+
+18. S362ANI_vsh.nc\
+Paper        : doi:10.1029/2007JB005169\
+Download link: http://ds.iris.edu/spud/earthmodel/10131231 (the netCDF binary for the above model expressed in km/s.)\
+Changes      : lose variables "vs", "vsv", rename variable "vsh" to "v".
