@@ -2,17 +2,17 @@
 
 In this database, I collected several whole mantle tomography results, and
 converted them into nc files. Each nc files contain 4 variables: depth,
-longitude, latitude and "v". The "v"alues could represent either S or P wave
+longitude, latitude and "v". The "v"alues could represent S wave or P wave
 speed (in km/s), velocity purturbation (%), density (in kg/m^3), Q or
 anisotropic parameters, etc. The details(comments) are within each nc files,
-but the file name roughly indicate which value it represent.
+but the nc file names roughly indicate which value it contains.
 
 Most of the model are downloaded from IRIS SPUD Service:\
-http://ds.iris.edu/spud/earthmodel\
+http://ds.iris.edu/spud/earthmodel \
 Others are downloaded from links in papers or from authors' websites and etc.
 
 The c++ tool to read and linear interpolate between values are provided in this file:\
-https://github.com/shuleyu/CPP-Library/blob/master/Tomography.hpp  
+https://github.com/shuleyu/CPP-Library/blob/master/Tomography.hpp
 Example program is:\
 https://github.com/shuleyu/CPP-Library/blob/master/Examples/Tomography.cpp
 
@@ -40,10 +40,10 @@ Changes      : lose variable "vs", rename variable "xi" to "v".
 
 5. MITP08_dvp.nc\
 Paper        : doi:10.1029/2007GC001806\
-Download link: https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2007GC001806&file=ggge1202-sup-0002-ds01.txt.gz  
-Changes      : convert the ascii file into nc file. rename variable "dvp" to "v".
+Download link: https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2007GC001806&file=ggge1202-sup-0002-ds01.txt.gz
+Changes      : convert the ascii file into nc file, rename variable "dvp" to "v", see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_MITP08_dvp.cpp
 
 6. MITP08_vp.nc\
 Paper        : doi:10.1029/2007GC001806\
-Download link: https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2007GC001806&file=ggge1202-sup-0002-ds01.txt.gz  
-Changes      : convert dvp into vp using ak135 reference model and create this nc file in which "v" representing "vp".
+Download link: https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2007GC001806&file=ggge1202-sup-0002-ds01.txt.gz
+Changes      : convert dvp into vp using ak135 reference model and create this nc file in which "v" representing "vp, km/s", see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_MITP08_vp.cpp
