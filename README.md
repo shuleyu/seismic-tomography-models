@@ -143,7 +143,17 @@ Paper        : doi:10.1111/j.1365-246X.2008.03763.x\
 Download link: http://ds.iris.edu/spud/earthmodel/10131133 (The netCDF binary of the model)\
 Changes      : rename variable "dvs" to "v".
 
-25. HMSL-S06_vs.nc\
+26. HMSL-S06_vs.nc\
 Paper        : doi:10.1111/j.1365-246X.2008.03763.x\
 Download link: http://ds.iris.edu/spud/earthmodel/10131133 (The netCDF binary of the model)\
 Changes      : convert dvs into vs using ak135 reference model. However, this doesn't have much meaning. In the model's online discription "While ak135 is the 1D model used for ray tracing in the inversion, the travel time measurements for each phase have the mean removed, so the 3D model is not built with respect to any particular 1D model.", therefore use with care, in this nc file, "v" represents "vs", see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_HMSL-S06_vs.cpp
+
+27. HMSL-P06_dvp.nc\
+Paper        : doi:10.1111/j.1365-246X.2008.03763.x\
+Download link: http://ds.iris.edu/spud/earthmodel/10131126 (The netCDF binary of the model)\
+Changes      : rename variable "dvp" to "v".
+
+28. HMSL-S06_vs.nc\
+Paper        : doi:10.1111/j.1365-246X.2008.03763.x\
+Download link: http://ds.iris.edu/spud/earthmodel/10131126 (The netCDF binary of the model)\
+Changes      : convert dvp into vp using ak135 reference model. However, this doesn't have much meaning. In the model's online discription "While ak135 is the 1D model used for ray tracing in the inversion, the travel time measurements for each phase have the mean removed, so the 3D model is not built with respect to any particular 1D model.", therefore use with care, in this nc file, "v" represents "vp", see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_HMSL-P06_vp.cpp

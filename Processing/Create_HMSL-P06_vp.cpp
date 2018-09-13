@@ -12,11 +12,11 @@ using namespace std;
 
 int main(){
 
-    auto tomo=Tomography::Model("HMSL-S06_dvs.nc");
+    auto tomo=Tomography::Model("HMSL-P06_dvp.nc");
 
     // write nc file.
     int retval,ncid;
-    string outfile="HMSL-S06_vs.nc";
+    string outfile="HMSL-P06_vp.nc";
 
     retval=nc_create(outfile.c_str(),NC_CLOBBER,&ncid);
     if (retval!=0) throw std::runtime_error(nc_strerror(retval));
@@ -61,7 +61,7 @@ int main(){
     retval=nc_put_att_text(ncid,lon_varid,"units",unit_lon.size(),unit_lon.c_str());
     if (retval!=0) throw std::runtime_error(nc_strerror(retval));
 
-    string unit_v="vs, km/s, converted form dvs and ak135, however, it might be meaningless, use with care";
+    string unit_v="vp, km/s, converted form dvp and ak135, however, it might be meaningless, use with care";
     retval=nc_put_att_text(ncid,v_varid,"units",unit_v.size(),unit_v.c_str());
     if (retval!=0) throw std::runtime_error(nc_strerror(retval));
 
@@ -105,7 +105,7 @@ int main(){
     for (size_t i=0;i<tomo.GetDepths().size();++i) {
         for (size_t j=0;j<tomo.GetLatitudes().size();++j) {
             for (size_t k=0;k<tomo.GetLongitudes().size();++k) {
-                data[index]=Dvs_ak135(tomo.GetDepths()[i])*(1-tomo.GetValues()[index]/100.0);
+                data[index]=Dvp_ak135(tomo.GetDepths()[i])*(1-tomo.GetValues()[index]/100.0);
                 ++index;
             }
         }
