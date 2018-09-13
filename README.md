@@ -122,3 +122,18 @@ Changes      : lose variables "vs", "vsh", rename variable "vsv" to "v".
 Paper        : doi:10.1093/gji/ggu356\
 Download link: http://ds.iris.edu/spud/earthmodel/10131294 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vs", "vsv", rename variable "vsh" to "v".
+
+22. S362WMANI_vs.nc\
+Paper        : doi:10.1029/2007JB005169\
+Download link: http://ds.iris.edu/spud/earthmodel/10131240 (the netCDF binary for the above model expressed in km/s)\
+Changes      : lose variables "vsv", "vsh", rename variable "vs" to "v".
+
+23. S362WMANI_vsv.nc\
+Paper        : doi:10.1029/2007JB005169\
+Download link: http://ds.iris.edu/spud/earthmodel/10131240 (the netCDF binary for the above model expressed in km/s)\
+Changes      : lose variables "vs", "vsh", rename variable "vsv" to "v".
+
+24. S362WMANI_vsh.nc\
+Paper        : doi:10.1029/2007JB005169\
+Download link: http://ds.iris.edu/spud/earthmodel/10131240 (the netCDF binary for the above model expressed in km/s)\
+Changes      : lose variables "vs", "vsv", rename variable "vsh" to "v".
