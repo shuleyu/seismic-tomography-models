@@ -39,11 +39,11 @@ Download link: http://ds.iris.edu/spud/earthmodel/10131263 (the netCDF binary fo
 Changes      : lose variable "vs", rename variable "xi" to "v".
 
 5. MITP08_dvp.nc\
-Paper        : doi:10.1029/2007GC001806
+Paper        : doi:10.1029/2007GC001806\
 Download link: https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2007GC001806&file=ggge1202-sup-0002-ds01.txt.gz\
 Changes      : convert the ascii file into nc file. rename variable "dvp" to "v".
 
 6. MITP08_vp.nc\
-Paper        : doi:10.1029/2007GC001806
+Paper        : doi:10.1029/2007GC001806\
 Download link: https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2007GC001806&file=ggge1202-sup-0002-ds01.txt.gz\
 Changes      : convert dvp into vp using ak135 reference model and create this nc file in which "v" representing "vp".
