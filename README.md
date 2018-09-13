@@ -67,3 +67,23 @@ Changes      : lose variables "vs", "vp", "Qs", rename variable "rho" to "v".
 Paper        : doi:10.1111/j.1365-246X.2006.03100.x\
 Download link: http://ds.iris.edu/spud/earthmodel/10131202 (the netCDF binary for the above model expressed in km/s.)\
 Changes      : lose variables "vs", "vp", "rho", rename variable "Qs" to "v".
+
+11. SAW642ANb_vs.nc\
+Paper        : doi:10.1029/2010JB007520\
+Download link: http://ds.iris.edu/spud/earthmodel/10131193 (the netCDF binary for the above model expressed in km/s.)\
+Changes      : lose variables "vp", "rho", "Qs", rename variable "vs" to "v".
+
+12. SAW642ANb_vp.nc\
+Paper        : doi:10.1029/2010JB007520\
+Download link: http://ds.iris.edu/spud/earthmodel/10131193 (the netCDF binary for the above model expressed in km/s.)\
+Changes      : lose variables "vs", "rho", "Qs", rename variable "vp" to "v".
+
+13. SAW642ANb_rho.nc\
+Paper        : doi:10.1029/2010JB007520\
+Download link: http://ds.iris.edu/spud/earthmodel/10131193 (the netCDF binary for the above model expressed in km/s.)\
+Changes      : lose variables "vs", "vp", "Qs", rename variable "rho" to "v".
+
+14. SAW642ANb_qs.nc\
+Paper        : doi:10.1029/2010JB007520\
+Download link: http://ds.iris.edu/spud/earthmodel/10131193 (the netCDF binary for the above model expressed in km/s.)\
+Changes      : lose variables "vs", "vp", "rho", rename variable "Qs" to "v".
