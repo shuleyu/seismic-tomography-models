@@ -12,7 +12,7 @@ http://ds.iris.edu/spud/earthmodel \
 Others are downloaded from links in papers or from authors' websites and etc.
 
 The c++ tool to read and linear interpolate between values are provided in this file:\
-https://github.com/shuleyu/CPP-Library/blob/master/Tomography.hpp
+https://github.com/shuleyu/CPP-Library/blob/master/Tomography.hpp \
 Example program is:\
 https://github.com/shuleyu/CPP-Library/blob/master/Examples/Tomography.cpp
 
@@ -41,12 +41,12 @@ Changes      : lose variable "vs", rename variable "xi" to "v".
 5. MITP08\_dvp.nc\
 Paper        : doi:10.1029/2007GC001806\
 Download link: https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2007GC001806&file=ggge1202-sup-0002-ds01.txt.gz
-Changes      : convert the ascii file into nc file, rename variable "dvp" to "v", see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create\_MITP08\_dvp.cpp
+Changes      : convert the ascii file into nc file, rename variable "dvp" to "v", see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_MITP08_dvp.cpp
 
 6. MITP08\_vp.nc\
 Paper        : doi:10.1029/2007GC001806\
 Download link: https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2007GC001806&file=ggge1202-sup-0002-ds01.txt.gz
-Changes      : convert dvp into vp using ak135 reference model and create this nc file in which "v" representing "vp, km/s", see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create\_MITP08\_vp.cpp
+Changes      : convert dvp into vp using ak135 reference model and create this nc file in which "v" representing "vp, km/s", see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_MITP08_vp.cpp
 
 7. SAW642AN\_vs.nc\
 Paper        : doi:10.1111/j.1365-246X.2006.03100.x\
@@ -146,7 +146,7 @@ Changes      : rename variable "dvs" to "v".
 26. HMSL-S06\_vs.nc\
 Paper        : doi:10.1111/j.1365-246X.2008.03763.x\
 Download link: http://ds.iris.edu/spud/earthmodel/10131133 (The netCDF binary of the model)\
-Changes      : convert dvs into vs using ak135 reference model. However, this doesn't have much meaning. In the model's online discription "While ak135 is the 1D model used for ray tracing in the inversion, the travel time measurements for each phase have the mean removed, so the 3D model is not built with respect to any particular 1D model.", therefore use with care, in this nc file, "v" represents "vs", see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create\_HMSL-S06\_vs.cpp
+Changes      : convert dvs into vs using ak135 reference model. However, this doesn't have much meaning. In the model's online discription "While ak135 is the 1D model used for ray tracing in the inversion, the travel time measurements for each phase have the mean removed, so the 3D model is not built with respect to any particular 1D model.", therefore use with care, in this nc file, "v" represents "vs", see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_HMSL-S06_vs.cpp
 
 27. HMSL-P06\_dvp.nc\
 Paper        : doi:10.1111/j.1365-246X.2008.03763.x\
@@ -156,14 +156,24 @@ Changes      : rename variable "dvp" to "v".
 28. HMSL-P06\_vp.nc\
 Paper        : doi:10.1111/j.1365-246X.2008.03763.x\
 Download link: http://ds.iris.edu/spud/earthmodel/10131126 (The netCDF binary of the model)\
-Changes      : convert dvp into vp using ak135 reference model. However, this doesn't have much meaning. In the model's online discription "While ak135 is the 1D model used for ray tracing in the inversion, the travel time measurements for each phase have the mean removed, so the 3D model is not built with respect to any particular 1D model.", therefore use with care, in this nc file, "v" represents "vp", see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create\_HMSL-P06\_vp.cpp
+Changes      : convert dvp into vp using ak135 reference model. However, this doesn't have much meaning. In the model's online discription "While ak135 is the 1D model used for ray tracing in the inversion, the travel time measurements for each phase have the mean removed, so the 3D model is not built with respect to any particular 1D model.", therefore use with care, in this nc file, "v" represents "vp", see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_HMSL-P06_vp.cpp
 
 29. LLNL-G3Dv3\_vp.nc\
 Paper        : doi:10.1029/2012JB009525\
 Download link: http://ds.iris.edu/spud/earthmodel/10131310 (Complete model package contains LLNL\_G3Dv3\_README.pdf file detailing the contents. Velocity values are expressed as absolute velocity and percentage variations relative to the layer average)\
-Changes      : Use the depth (column 3) in "LLNL\_G3Dv3.LayerAverages.txt", latitude ranging from -90 to 90, longitude ranging from -180 to 180, values (column 2) in "LLNL\_G3Dv3.Interpolated.Layer??\_\*km.txt" to creat the vp grid. This ignore a lot details. Use with care.
+Changes      : Use the depth (column 3) in "LLNL\_G3Dv3.LayerAverages.txt", latitude ranging from -90 to 90, longitude ranging from -180 to 180, values (column 2) in "LLNL\_G3Dv3.Interpolated.Layer??\_\*km.txt" to creat the vp grid. This ignore a lot details. Use with care. see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_LLNL-G3Dv3_vp.cpp
 
 30. LLNL-G3Dv3\_dvp.nc\
 Paper        : doi:10.1029/2012JB009525\
 Download link: http://ds.iris.edu/spud/earthmodel/10131310 (Complete model package contains LLNL\_G3Dv3\_README.pdf file detailing the contents. Velocity values are expressed as absolute velocity and percentage variations relative to the layer average)\
-Changes      : Use the depth (column 3) in "LLNL\_G3Dv3.LayerAverages.txt", latitude ranging from -90 to 90, longitude ranging from -180 to 180, values (column 3) in "LLNL\_G3Dv3.Interpolated.Layer??\_\*km.txt" to creat the dvp grid. This ignore a lot details. Use with care.
+Changes      : Use the depth (column 3) in "LLNL\_G3Dv3.LayerAverages.txt", latitude ranging from -90 to 90, longitude ranging from -180 to 180, values (column 3) in "LLNL\_G3Dv3.Interpolated.Layer??\_\*km.txt" to creat the dvp grid. This ignore a lot details. Use with care. see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_LLNL-G3Dv3_dvp.cpp
+
+31. TX2000\_dvs.nc\
+Paper        : doi:10.1098/rsta.2002.1077
+Download link: http://ds.iris.edu/spud/earthmodel/10131209 (Model on a 4°x4° grid for depths from 60 to 2800 km at non-uniform intervals in netCDF format.)\
+Changes      : rename variable "dvs" to "v".
+
+32. TX2000\_vs.nc\
+Paper        : doi:10.1098/rsta.2002.1077
+Download link: http://ds.iris.edu/spud/earthmodel/10131209 (Model on a 4°x4° grid for depths from 60 to 2800 km at non-uniform intervals in netCDF format.)\
+Changes      : convert dvs into vs using PREM. The desicription in the dvs reads "(% deviation from layer mean)". Use with care. see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_TX2000_vs.cpp
