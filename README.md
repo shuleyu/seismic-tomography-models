@@ -169,21 +169,41 @@ Download link: http://ds.iris.edu/spud/earthmodel/10131310 (Complete model packa
 Changes      : Use the depth (column 3) in "LLNL\_G3Dv3.LayerAverages.txt", latitude ranging from -90 to 90, longitude ranging from -180 to 180, values (column 3) in "LLNL\_G3Dv3.Interpolated.Layer??\_\*km.txt" to creat the dvp grid. This ignore a lot details. Use with care. in this nc file, "v" represents "dvp". see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_LLNL-G3Dv3_dvp.cpp
 
 31. TX2000\_dvs.nc\
-Paper        : doi:10.1098/rsta.2002.1077
+Paper        : doi:10.1098/rsta.2002.1077\
 Download link: http://ds.iris.edu/spud/earthmodel/10131209 (Model on a 4°x4° grid for depths from 60 to 2800 km at non-uniform intervals in netCDF format.)\
 Changes      : rename variable "dvs" to "v".
 
 32. TX2000\_vs.nc\
-Paper        : doi:10.1098/rsta.2002.1077
+Paper        : doi:10.1098/rsta.2002.1077\
 Download link: http://ds.iris.edu/spud/earthmodel/10131209 (Model on a 4°x4° grid for depths from 60 to 2800 km at non-uniform intervals in netCDF format.)\
 Changes      : convert dvs into vs using PREM. The desicription in the dvs reads "(% deviation from layer mean)". Use with care. in this nc file, "v" represents "vs". see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_TX2000_vs.cpp
 
 33. TX2011\_dvs.nc\
-Paper        : doi:10.1098/rsta.2002.1077
+Paper        : doi:10.1098/rsta.2002.1077\
 Download link: http://ds.iris.edu/spud/earthmodel/10131216 (Model on a 2°x2° grid for depths from 0 to 2890 km in netCDF format)\
 Changes      : rename variable "dvs" to "v".
 
 34. TX2000\_vs.nc\
-Paper        : doi:10.1098/rsta.2002.1077
+Paper        : doi:10.1098/rsta.2002.1077\
 Download link: http://ds.iris.edu/spud/earthmodel/10131216 (Model on a 2°x2° grid for depths from 0 to 2890 km in netCDF format)\
-Changes      : convert dvs into vs using TX2011_ref downloaed from http://ds.iris.edu/files/products/emc/data/TX2011/TX2011_ref. in this nc file, "v" represents "vs". see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_TX2011_vs.cpp
+Changes      : convert dvs into vs using TX2011_ref downloaded from http://ds.iris.edu/files/products/emc/data/TX2011/TX2011_ref. in this nc file, "v" represents "vs". see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_TX2011_vs.cpp
+
+35. SEMUCB-WM1\_dvs.nc\
+Paper        : doi:10.1093/gji/ggu334\
+Download link: http://www.seismo.berkeley.edu/~barbara/REPRINTS/UCB_a3d_dist.SEMUCB-WM1.r20151019.tar.gz \
+Changes      : Use the program provided in the tar file, a 10km depth interval (from 60km to 2890km to avoid "nan"), 1 deg x 1 deg grid is created for dvs. This dvs is "the relative Voigt-average shear velocity perturbation relative to the reference 1D model data/model.ref". in this nc file, "v" represents "dvs". see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_SEMUCB-WM1_dvs.cpp
+
+36. SEMUCB-WM1\_vsh.nc\
+Paper        : doi:10.1093/gji/ggu334\
+Download link: http://www.seismo.berkeley.edu/~barbara/REPRINTS/UCB_a3d_dist.SEMUCB-WM1.r20151019.tar.gz \
+Changes      : Use the program provided in the tar file, a 10km depth interval (from 60km to 2890km to avoid "nan"), 1 deg x 1 deg grid is created for vsh. in this nc file, "v" represents "vsh". see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_SEMUCB-WM1_vsh.cpp
+
+37. SEMUCB-WM1\_vsv.nc\
+Paper        : doi:10.1093/gji/ggu334\
+Download link: http://www.seismo.berkeley.edu/~barbara/REPRINTS/UCB_a3d_dist.SEMUCB-WM1.r20151019.tar.gz \
+Changes      : Use the program provided in the tar file, a 10km depth interval (from 60km to 2890km to avoid "nan"), 1 deg x 1 deg grid is created for vsv. in this nc file, "v" represents "vsv". see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_SEMUCB-WM1_vsv.cpp
+
+38. SEMUCB-WM1\_vs.nc\
+Paper        : doi:10.1093/gji/ggu334\
+Download link: http://www.seismo.berkeley.edu/~barbara/REPRINTS/UCB_a3d_dist.SEMUCB-WM1.r20151019.tar.gz \
+Changes      : This vs is the Voigt-average shear velocity (sqrt((vsh^2+2vsv^2)/3)) in the same grid as before. in this nc file, "v" represents "vs". see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_SEMUCB-WM1_vs.cpp
