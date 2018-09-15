@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# prompt> export TOMO_S20RTS=`pwd`
+# prompt> export PATH=${PATH}:.
 # S40RTS, make sure use "mod = 1" in mkmap
 # This will create S40RTS.txt. Noitice it's not sorted.
 
