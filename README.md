@@ -186,7 +186,7 @@ Changes      : rename variable "dvs" to "v".
 34. TX2000\_vs.nc\
 Paper        : doi:10.1098/rsta.2002.1077\
 Download link: http://ds.iris.edu/spud/earthmodel/10131216 (Model on a 2°x2° grid for depths from 0 to 2890 km in netCDF format)\
-Changes      : convert dvs into vs using TX2011_ref downloaded from http://ds.iris.edu/files/products/emc/data/TX2011/TX2011_ref. in this nc file, "v" represents "vs". see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_TX2011_vs.cpp
+Changes      : convert dvs into vs using TX2011\_ref downloaded from http://ds.iris.edu/files/products/emc/data/TX2011/TX2011_ref. in this nc file, "v" represents "vs". see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_TX2011_vs.cpp
 
 35. SEMUCB-WM1\_dvs.nc\
 Paper        : doi:10.1093/gji/ggu334\
@@ -206,4 +206,24 @@ Changes      : Use the program provided in the tar file, a 10km depth interval (
 38. SEMUCB-WM1\_vs.nc\
 Paper        : doi:10.1093/gji/ggu334\
 Download link: http://www.seismo.berkeley.edu/~barbara/REPRINTS/UCB_a3d_dist.SEMUCB-WM1.r20151019.tar.gz \
-Changes      : This vs is the Voigt-average shear velocity (sqrt((vsh^2+2vsv^2)/3)) in the same grid as before. in this nc file, "v" represents "vs". see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_SEMUCB-WM1_vs.cpp
+Changes      : This vs is the Voigt-average shear velocity (sqrt((vsh^2+2vsv^2)/3)) in the same grid. in this nc file, "v" represents "vs". see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_SEMUCB-WM1_vs.cpp
+
+39. S20RTS\_dvs.nc\
+Paper        : doi:10.1126/science.286.5446.1925
+Download link: https://jritsema.earth.lsa.umich.edu/S20RTS_plotting.tar.gz \
+Changes      : Use the program provided in the tar fille, a 10km depth interval (24.4km, 25km to 2885km, 2891km), 1 deg x 1 deg grid is created for dvs. in this nc file, "v" represents "dvs". see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_S20RTS_dvs.cpp
+
+40. S20RTS\_vs.nc\
+Paper        : doi:10.1126/science.286.5446.1925
+Download link: https://jritsema.earth.lsa.umich.edu/S20RTS_plotting.tar.gz \
+Changes      : Because S40RTS has PREM as reference 1D model, I presume S20RTS is also using PREM. The vs is calculated using the dvs in the previous grid and PREM. in this nc file, "v" represents "vs". see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_S20RTS_vs.cpp
+
+41. S40RTS\_dvs.nc\
+Paper        : doi:10.1111/j.1365-246X.2010.04884.x\
+Download link: https://jritsema.earth.lsa.umich.edu/S20RTS_plotting.tar.gz \
+Changes      : Use the program provided in the tar fille, a 10km depth interval (24.4km, 25km to 2885km, 2891km), 1 deg x 1 deg grid is created for dvs. in this nc file, "v" represents "dvs". see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_S40RTS_dvs.cpp
+
+42. S40RTS\_vs.nc\
+Paper        : doi:10.1111/j.1365-246X.2010.04884.x\
+Download link: https://jritsema.earth.lsa.umich.edu/S20RTS_plotting.tar.gz \
+Changes      : In paper it reads "... S40RTS is a model of 3‐D perturbations of isotropic shear velocity with respect to the PREM model...". The vs is calculated using the dvs in the previous grid and PREM. in this nc file, "v" represents "vs". see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_S40RTS_vs.cpp
