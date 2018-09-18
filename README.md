@@ -4,17 +4,12 @@ In this database, I collected several whole mantle tomography results, and
 converted them into nc files. Each nc files contain 4 variables: depth,
 longitude, latitude and "v". The "v"alues could represent S wave or P wave
 speed (in km/s), velocity purturbation (%), density (in kg/m^3), Q or
-anisotropic parameters, etc. The details(comments) are within each nc files,
-but the nc file names roughly indicate which value it contains.
+anisotropic parameters, etc(See the comments within each nc files). The nc
+file name postfixes indicate which type of value it contains.
 
-Most of the model are downloaded from IRIS SPUD Service:\
-http://ds.iris.edu/spud/earthmodel \
-Others are downloaded from links in papers or from authors' websites and etc.
-
-The c++ tool to read and linear interpolate between values are provided in this file:\
-https://github.com/shuleyu/CPP-Library/blob/master/Tomography.hpp \
-Example program is:\
-https://github.com/shuleyu/CPP-Library/blob/master/Examples/Tomography.cpp
+The c++ tools to read the nc files and linear interpolating to get value at
+request location are provided in src \
+Dependencies are netcdf-4.6.1, GMT-5.4.4. See src/Makefile for details.
 
 Here are details about download sources and convertions to these nc files:
 
