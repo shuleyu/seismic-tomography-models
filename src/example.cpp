@@ -14,6 +14,7 @@ int main(){
     cout << tomo.GetValueAt(2343.5,253.03,-43.4) << endl;
 
 
+    /*
 
     // Example 2. Plot a depth slice.
 
@@ -43,6 +44,8 @@ int main(){
 
     GMT::SealPlot(outfile);
     remove("tmp.cpt");
+
+    */
 
     return 0;
 }
