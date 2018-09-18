@@ -36,16 +36,16 @@ Changes      : lose variable "xi", rename variable "vs" to "v".
 4. SEMum\_xi.nc\
 Paper        : doi:10.1111/j.1365-246X.2011.04969.x\
 Download link: http://ds.iris.edu/spud/earthmodel/10131263 (the netCDF binary for the above model expressed as absolute velocity)\
-Changes      : lose variable "vs", rename variable "xi" to "v".
+Changes      : lose variable "vs", rename variable "xi" to "v". xi= (vsh^2/vsv^2).
 
 5. MITP08\_dvp.nc\
 Paper        : doi:10.1029/2007GC001806\
-Download link: https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2007GC001806&file=ggge1202-sup-0002-ds01.txt.gz
+Download link: https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2007GC001806&file=ggge1202-sup-0002-ds01.txt.gz \
 Changes      : convert the ascii file into nc file, rename variable "dvp" to "v", see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_MITP08_dvp.cpp
 
 6. MITP08\_vp.nc\
 Paper        : doi:10.1029/2007GC001806\
-Download link: https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2007GC001806&file=ggge1202-sup-0002-ds01.txt.gz
+Download link: https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2007GC001806&file=ggge1202-sup-0002-ds01.txt.gz \
 Changes      : convert dvp into vp using ak135 reference model and create this nc file in which "v" representing "vp, km/s", see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_MITP08_vp.cpp
 
 7. SAW642AN\_vs.nc\
@@ -266,7 +266,7 @@ Changes      : lose variables "dlnvp", "dlnvs", "vp", "xi", "phi", rename variab
 50. SPani\_xi.nc\
 Paper        : doi:10.1002/2015JB012026\
 Download link: http://ds.iris.edu/spud/earthmodel/10162642 (the netCDF binary for the above model)\
-Changes      : lose variables "dlnvp", "dlnvs", "vp", "vs", "phi", rename variable "xi" to "v". In paper it reads xi = (vsh^2/vsv^2), in this nc file, there might be a typo.
+Changes      : lose variables "dlnvp", "dlnvs", "vp", "vs", "phi", rename variable "xi" to "v". In paper it reads xi = (vsh^2/vsv^2). In this nc file, there might be a typo.
 
 51. SPani\_phi.nc\
 Paper        : doi:10.1002/2015JB012026\
