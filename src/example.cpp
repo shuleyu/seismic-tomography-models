@@ -19,8 +19,12 @@ int main(){
     */
 
 
+    /*
+
+
     // Example 2. Plot depth slices.
-    vector<string> ModelNames={"GyPSuM_vp.nc","GyPSuM_vs.nc","HMSL-P06_dvp.nc","HMSL-P06_vp.nc","HMSL-S06_dvs.nc","HMSL-S06_vs.nc","LLNL-G3Dv3_dvp.nc","LLNL-G3Dv3_vp.nc","MITP08_dvp.nc","MITP08_vp.nc","S20RTS_dvs.nc","S362ANI+M_vsh.nc","S362ANI+M_vs.nc","S362ANI+M_vsv.nc","S362ANI_vsh.nc","S362ANI_vs.nc","S362ANI_vsv.nc","S362WMANI_vsh.nc","S362WMANI_vs.nc","S362WMANI_vsv.nc","S40RTS_dvs.nc","SAW24B16_vs.nc","SAW642ANb_qs.nc","SAW642ANb_rho.nc","SAW642ANb_vp.nc","SAW642ANb_vs.nc","SAW642AN_qs.nc","SAW642AN_rho.nc","SAW642AN_vp.nc","SAW642AN_vs.nc","SEISGLOB2_dvs.nc","SEMUCB-WM1_dvs.nc","SEMUCB-WM1_vsh.nc","SEMUCB-WM1_vs.nc","SEMUCB-WM1_vsv.nc","SEMum_vs.nc","SEMum_xi.nc","SGLOBE-rani_dvs.nc","SGLOBE-rani_vsh.nc","SGLOBE-rani_vsv.nc","SP12RTS_dvp.nc","SP12RTS_dvs.nc","SPani_dvp.nc","SPani_dvs.nc","SPani_phi.nc","SPani_vp.nc","SPani_vs.nc","SPani_xi.nc","TX2000_dvs.nc","TX2011_dvs.nc","TX2011_vs.nc"};
+    vector<string> ModelNames={"TX2011_dvs.nc"};
+//     vector<string> ModelNames={"GyPSuM_vp.nc","GyPSuM_vs.nc","HMSL-P06_dvp.nc","HMSL-P06_vp.nc","HMSL-S06_dvs.nc","HMSL-S06_vs.nc","LLNL-G3Dv3_dvp.nc","LLNL-G3Dv3_vp.nc","MITP08_dvp.nc","MITP08_vp.nc","S20RTS_dvs.nc","S362ANI+M_vsh.nc","S362ANI+M_vs.nc","S362ANI+M_vsv.nc","S362ANI_vsh.nc","S362ANI_vs.nc","S362ANI_vsv.nc","S362WMANI_vsh.nc","S362WMANI_vs.nc","S362WMANI_vsv.nc","S40RTS_dvs.nc","SAW24B16_vs.nc","SAW642ANb_qs.nc","SAW642ANb_rho.nc","SAW642ANb_vp.nc","SAW642ANb_vs.nc","SAW642AN_qs.nc","SAW642AN_rho.nc","SAW642AN_vp.nc","SAW642AN_vs.nc","SEISGLOB2_dvs.nc","SEMUCB-WM1_dvs.nc","SEMUCB-WM1_vsh.nc","SEMUCB-WM1_vs.nc","SEMUCB-WM1_vsv.nc","SEMum_vs.nc","SEMum_xi.nc","SGLOBE-rani_dvs.nc","SGLOBE-rani_vsh.nc","SGLOBE-rani_vsv.nc","SP12RTS_dvp.nc","SP12RTS_dvs.nc","SPani_dvp.nc","SPani_dvs.nc","SPani_phi.nc","SPani_vp.nc","SPani_vs.nc","SPani_xi.nc","TX2000_dvs.nc","TX2011_dvs.nc","TX2011_vs.nc"};
 
     vector<double> Depths={100,220,300,410,500,600,660,700,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800};
 
@@ -57,7 +61,6 @@ int main(){
                     maxval=max(maxval,grid.back().back());
                 }
             maxval=max(fabs(minval),fabs(maxval));
-            cout << minval << " " << maxval << endl;
 
             GMT::MoveReferencePoint(outfile,"-Xf"+to_string(1+9*i)+"i -Yf"+to_string(YSIZE-7*(j+1)+0.5)+"i");
             GMT::makecpt("-Cpolar -T"+to_string(ModelNames[i][p]=='d'?-maxval:minval)+"/"+to_string(maxval)+" -I -D > tmp.cpt");
@@ -70,6 +73,8 @@ int main(){
 
     GMT::SealPlot(outfile);
     remove("tmp.cpt");
+    
+    */
 
     return 0;
 }
