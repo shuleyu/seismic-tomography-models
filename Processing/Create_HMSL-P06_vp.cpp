@@ -12,7 +12,7 @@ using namespace std;
 
 int main(){
 
-    auto tomo=Tomography::Model("HMSL-P06_dvp.nc");
+    auto tomo=Tomography("HMSL-P06_dvp.nc");
 
     // write nc file.
     int retval,ncid;
@@ -105,7 +105,7 @@ int main(){
     for (size_t i=0;i<tomo.GetDepths().size();++i) {
         for (size_t j=0;j<tomo.GetLatitudes().size();++j) {
             for (size_t k=0;k<tomo.GetLongitudes().size();++k) {
-                data[index]=Dvp_ak135(tomo.GetDepths()[i])*(1-tomo.GetValues()[index]/100.0);
+                data[index]=Dvp_ak135(tomo.GetDepths()[i])*(1+tomo.GetValues()[index]/100.0);
                 ++index;
             }
         }

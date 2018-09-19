@@ -28,17 +28,19 @@ extern "C" {
 class Tomography {
 
     std::vector<double> depth,lat,lon,v; // depth in km. lon between [-180,180].
-    bool Use360;
+    bool range_is_360;
 
 public:
     Tomography()=default;
+
     Tomography(const std::vector<double> &d, const std::vector<double> &lo,
           const std::vector<double> &la, const std::vector<double> &data) {
         if (data.size()!=d.size()*lo.size()*la.size())
             throw std::runtime_error("In "+std::string(__func__)+", input sizes don't match.");
-        depth=d;lat=la;lon=lo;v=data;Use360=(!lo.empty() && lo[0]>=0);
-
+        depth=d;lat=la;lon=lo;v=data;range_is_360=(!lon.empty() && lon[0]>=0);
+        if (!la.empty() && la[0]>0) ReverseLatitude();
     }
+
     Tomography(const std::string &nc_filename){
 
         // tmp data.
@@ -89,7 +91,6 @@ public:
         for (size_t i=0;i<lat_len;++i) lat[i]=data[i];
         delete [] data;
 
-
         // get longitude length and data.
         int lon_id;
         size_t lon_len;
@@ -106,10 +107,10 @@ public:
         data=new float [lon_len];
         retval=nc_get_var_float(ncid,lon_varid,data);
         if (retval!=0) throw std::runtime_error(nc_strerror(retval));
-        Use360=(data[0]>=0);
         for (size_t i=0;i<lon_len;++i) lon[i]=data[i];
         delete [] data;
 
+        range_is_360=(!lon.empty() && lon[0]>=0);
 
         // get velocity length and data.
         size_t v_len=depth_len*lat_len*lon_len;
@@ -129,6 +130,9 @@ public:
         // close the nc file.
         retval=nc_close(ncid);
         if (retval!=0) throw std::runtime_error(nc_strerror(retval));
+
+        // check latitude direction.
+        if (!lat.empty() && lat[0]>0) ReverseLatitude();
     }
 
     double GetValueAt(const double &d, double lo, const double &la) const;
@@ -136,6 +140,7 @@ public:
     const std::vector<double> &GetLatitudes() const {return lat;}
     const std::vector<double> &GetLongitudes() const {return lon;}
     const std::vector<double> &GetValues() const {return v;}
+    void ReverseLatitude();
 
 };
 
@@ -146,7 +151,9 @@ double Tomography::GetValueAt(const double &d, double lo, const double &la) cons
 
     if (d<depth[0] || d>depth.back() || la<lat[0] || la>lat.back()) return 0.0/0.0;
 
-    lo=(Use360?Lon2360(lo):Lon2180(lo));
+    size_t lat_len=GetLatitudes().size(),lon_len=GetLongitudes().size();
+
+    lo=(range_is_360?Lon2360(lo):Lon2180(lo));
     size_t index_depth=std::distance(depth.begin(),
                                      std::lower_bound(depth.begin(),depth.end(),d));
     size_t index_lat=std::distance(lat.begin(),std::lower_bound(lat.begin(),lat.end(),la));
@@ -154,18 +161,19 @@ double Tomography::GetValueAt(const double &d, double lo, const double &la) cons
 
     size_t index_prev_depth=(index_depth==0?0:index_depth-1);
     size_t index_prev_lat=(index_lat==0?0:index_lat-1);
-    size_t index_prev_lon=(index_lon==0?lon.size()-1:index_lon-1);
-    if (index_lon==lon.size()) index_lon=0;
+    size_t index_prev_lon=(index_lon==0?lon_len-1:index_lon-1);
+    if (index_lon==lon_len) index_lon=0;
+
 
     std::vector<double> p(8),pp(3);
-    p[0]=v[index_prev_depth*lat.size()*lon.size()+index_prev_lat*lon.size()+index_prev_lon];
-    p[1]=v[index_prev_depth*lat.size()*lon.size()+index_prev_lat*lon.size()+index_lon];
-    p[2]=v[index_prev_depth*lat.size()*lon.size()+index_lat*lon.size()+index_prev_lon];
-    p[3]=v[index_prev_depth*lat.size()*lon.size()+index_lat*lon.size()+index_lon];
-    p[4]=v[index_depth*lat.size()*lon.size()+index_prev_lat*lon.size()+index_prev_lon];
-    p[5]=v[index_depth*lat.size()*lon.size()+index_prev_lat*lon.size()+index_lon];
-    p[6]=v[index_depth*lat.size()*lon.size()+index_lat*lon.size()+index_prev_lon];
-    p[7]=v[index_depth*lat.size()*lon.size()+index_lat*lon.size()+index_lon];
+    p[0]=v[index_prev_depth*lat_len*lon_len+index_prev_lat*lon_len+index_prev_lon];
+    p[1]=v[index_prev_depth*lat_len*lon_len+index_prev_lat*lon_len+index_lon];
+    p[2]=v[index_prev_depth*lat_len*lon_len+index_lat*lon_len+index_prev_lon];
+    p[3]=v[index_prev_depth*lat_len*lon_len+index_lat*lon_len+index_lon];
+    p[4]=v[index_depth*lat_len*lon_len+index_prev_lat*lon_len+index_prev_lon];
+    p[5]=v[index_depth*lat_len*lon_len+index_prev_lat*lon_len+index_lon];
+    p[6]=v[index_depth*lat_len*lon_len+index_lat*lon_len+index_prev_lon];
+    p[7]=v[index_depth*lat_len*lon_len+index_lat*lon_len+index_lon];
     if (index_prev_lon>index_lon)
         pp[0]=((lo<lon[index_prev_lon]?lo+360:lo)-lon[index_prev_lon])
               /(lon[index_lon]+360-lon[index_prev_lon]);
@@ -174,6 +182,20 @@ double Tomography::GetValueAt(const double &d, double lo, const double &la) cons
     pp[1]=(la-lat[index_prev_lat])/(lat[index_lat]-lat[index_prev_lat]);
     pp[2]=(d-depth[index_prev_depth])/(depth[index_depth]-depth[index_prev_depth]);
     return LinearInterp(p,pp);
+}
+
+void Tomography::ReverseLatitude(){
+    auto old_data=GetValues();
+    size_t lat_len=GetLatitudes().size(),lon_len=GetLongitudes().size();
+
+    for (size_t i=0;i<GetValues().size();++i){
+        size_t depth_index=i/(lat_len*lon_len);
+        size_t lat_index=lat_len-1-(i%(lat_len*lon_len))/lon_len;
+        size_t lon_index=(i%(lat_len*lon_len))%lon_len;
+        v[i]=old_data[depth_index*(lat_len*lon_len)+lat_index*lon_len+lon_index];
+    }
+    std::reverse(lat.begin(),lat.end());
+    return;
 }
 
 #endif
