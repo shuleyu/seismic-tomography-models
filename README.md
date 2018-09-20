@@ -267,3 +267,5 @@ Changes      : lose variables "dlnvp", "dlnvs", "vp", "vs", "phi", rename variab
 Paper        : doi:10.1002/2015JB012026\
 Download link: http://ds.iris.edu/spud/earthmodel/10162642 (the netCDF binary for the above model)\
 Changes      : lose variables "dlnvp", "dlnvs", "vp", "vs", "xi", rename variable "phi" to "v". In paper it reads phi = (vpv^2/vph^2).
+
+![alt text](https://github.com/shuleyu/seismic-tomography-models/blob/master/src/example.png)
