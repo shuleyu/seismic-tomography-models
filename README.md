@@ -261,7 +261,7 @@ Changes      : lose variables "dlnvp", "dlnvs", "vp", "xi", "phi", rename variab
 50. SPani\_xi.nc\
 Paper        : doi:10.1002/2015JB012026\
 Download link: http://ds.iris.edu/spud/earthmodel/10162642 (the netCDF binary for the above model)\
-Changes      : lose variables "dlnvp", "dlnvs", "vp", "vs", "phi", rename variable "xi" to "v". In paper it reads xi = (vsh^2/vsv^2). In this nc file, there might be a typo.
+Changes      : lose variables "dlnvp", "dlnvs", "vp", "vs", "phi", rename variable "xi" to "v". In paper it reads xi = (vsh^2/vsv^2). In this nc file, the comment reads xi=(vsv^2/vsh^2), which could be a typo.
 
 51. SPani\_phi.nc\
 Paper        : doi:10.1002/2015JB012026\
