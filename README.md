@@ -1,5 +1,7 @@
 # seismic-tomography-models
 
+![alt text](https://github.com/shuleyu/seismic-tomography-models/blob/master/src/example.png)
+
 In this database, I collected several whole mantle tomography results, and
 converted them into nc files. Each nc files contain 4 variables: depth,
 longitude, latitude and "v". The "v"alues could represent S wave or P wave
@@ -268,4 +270,3 @@ Paper        : doi:10.1002/2015JB012026\
 Download link: http://ds.iris.edu/spud/earthmodel/10162642 (the netCDF binary for the above model)\
 Changes      : lose variables "dlnvp", "dlnvs", "vp", "vs", "xi", rename variable "phi" to "v". In paper it reads phi = (vpv^2/vph^2).
 
-![alt text](https://github.com/shuleyu/seismic-tomography-models/blob/master/src/example.png)
