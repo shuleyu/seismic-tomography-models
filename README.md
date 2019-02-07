@@ -15,12 +15,12 @@ Dependencies are netcdf-4.6.1, GMT-5.4.4. See src/Makefile for details.
 
 Here are details about download sources and convertions to these nc files:
 
-1. GyPSum\_vs.nc\
+1. GyPSuM\_vs.nc\
 Paper        : [Simmons et al., 2010] https://doi.org/10.1029/2010JB007631 \
 Download link: http://ds.iris.edu/spud/earthmodel/10131119 (netCDF binary of S velocity expressed as km/s)\
 Changes      : rename variable "vs" to "v".
 
-2. GyPSum\_vp.nc\
+2. GyPSuM\_vp.nc\
 Paper        : [Simmons et al., 2010] https://doi.org/10.1029/2010JB007631 \
 Download link: http://ds.iris.edu/spud/earthmodel/10131119 (netCDF binary of P velocity expressed as km/s)\
 Changes      : rename variable "vp" to "v".
@@ -175,7 +175,7 @@ Paper        : [Davies et al., 2002] https://doi.org/10.1098/rsta.2002.1077 \
 Download link: http://ds.iris.edu/spud/earthmodel/10131216 (Model on a 2°x2° grid for depths from 0 to 2890 km in netCDF format)\
 Changes      : rename variable "dvs" to "v".
 
-33. TX2000\_vs.nc\
+33. TX2011\_vs.nc\
 Paper        : [Davies et al., 2002] https://doi.org/10.1098/rsta.2002.1077 \
 Download link: http://ds.iris.edu/spud/earthmodel/10131216 (Model on a 2°x2° grid for depths from 0 to 2890 km in netCDF format)\
 Changes      : convert dvs into vs using TX2011\_ref downloaded from http://ds.iris.edu/files/products/emc/data/TX2011/TX2011_ref. in this nc file, "v" represents "vs". see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_TX2011_vs.cpp
