@@ -91,17 +91,17 @@ Download link: http://ds.iris.edu/spud/earthmodel/10131184 (The netCDF binary fo
 Changes      : rename variable "vsh" to "v".
 
 16. S362ANI\_vs.nc\
-Paper        : [Kustowiski and Ekstrom, 2008] https://doi.org/10.1029/2007JB005169 \
+Paper        : [Kustowiski et al., 2008] https://doi.org/10.1029/2007JB005169 \
 Download link: http://ds.iris.edu/spud/earthmodel/10131231 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vsv", "vsh", rename variable "vs" to "v".
 
 17. S362ANI\_vsv.nc\
-Paper        : [Kustowiski and Ekstrom, 2008] https://doi.org/10.1029/2007JB005169 \
+Paper        : [Kustowiski et al., 2008] https://doi.org/10.1029/2007JB005169 \
 Download link: http://ds.iris.edu/spud/earthmodel/10131231 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vs", "vsh", rename variable "vsv" to "v".
 
 18. S362ANI\_vsh.nc\
-Paper        : [Kustowiski and Ekstrom, 2008] https://doi.org/10.1029/2007JB005169 \
+Paper        : [Kustowski et al., 2008] https://doi.org/10.1029/2007JB005169 \
 Download link: http://ds.iris.edu/spud/earthmodel/10131231 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vs", "vsv", rename variable "vsh" to "v".
 
