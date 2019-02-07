@@ -16,92 +16,92 @@ Dependencies are netcdf-4.6.1, GMT-5.4.4. See src/Makefile for details.
 Here are details about download sources and convertions to these nc files:
 
 1. GyPSum\_vs.nc\
-Paper        : https://doi.org/10.1029/2010JB007631 \
+Paper        : [Simmons et al., 2010] https://doi.org/10.1029/2010JB007631 \
 Download link: http://ds.iris.edu/spud/earthmodel/10131119 (netCDF binary of S velocity expressed as km/s)\
 Changes      : rename variable "vs" to "v".
 
 2. GyPSum\_vp.nc\
-Paper        : https://doi.org/10.1029/2010JB007631 \
+Paper        : [Simmons et al., 2010] https://doi.org/10.1029/2010JB007631 \
 Download link: http://ds.iris.edu/spud/earthmodel/10131119 (netCDF binary of P velocity expressed as km/s)\
 Changes      : rename variable "vp" to "v".
 
 3. SEMum\_vs.nc\
-Paper        : https://doi.org/10.1111/j.1365-246X.2011.04969.x \
+Paper        : [Lekic and Romanowicz, 2011] https://doi.org/10.1111/j.1365-246X.2011.04969.x \
 Download link: http://ds.iris.edu/spud/earthmodel/10131263 (the netCDF binary for the above model expressed as absolute velocity)\
 Changes      : lose variable "xi", rename variable "vs" to "v".
 
 4. SEMum\_xi.nc\
-Paper        : https://doi.org/10.1111/j.1365-246X.2011.04969.x \
+Paper        : [Lekic and Romanowicz, 2011] https://doi.org/10.1111/j.1365-246X.2011.04969.x \
 Download link: http://ds.iris.edu/spud/earthmodel/10131263 (the netCDF binary for the above model expressed as absolute velocity)\
 Changes      : lose variable "vs", rename variable "xi" to "v". xi= (vsh^2/vsv^2).
 
 5. MITP08\_dvp.nc\
-Paper        : https://doi.org/10.1029/2007GC001806 \
+Paper        : [Li et al., 2008] https://doi.org/10.1029/2007GC001806 \
 Download link: https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2007GC001806&file=ggge1202-sup-0002-ds01.txt.gz \
 Changes      : convert the ascii file into nc file, rename variable "dvp" to "v", see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_MITP08_dvp.cpp
 
 6. MITP08\_vp.nc\
-Paper        : https://doi.org/10.1029/2007GC001806 \
+Paper        : [Li et al., 2008] https://doi.org/10.1029/2007GC001806 \
 Download link: https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2007GC001806&file=ggge1202-sup-0002-ds01.txt.gz \
 Changes      : convert dvp into vp using ak135 reference model and create this nc file in which "v" representing "vp, km/s", see https://github.com/shuleyu/seismic-tomography-models/blob/master/Processing/Create_MITP08_vp.cpp
 
 7. SAW642AN\_vs.nc\
-Paper        : https://doi.org/10.1111/j.1365-246X.2006.03100.x \
+Paper        : [Panning and Romanowicz, 2006] https://doi.org/10.1111/j.1365-246X.2006.03100.x \
 Download link: http://ds.iris.edu/spud/earthmodel/10131202 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vp", "rho", "Qs", rename variable "vs" to "v".
 
 8. SAW642AN\_vp.nc\
-Paper        : https://doi.org/10.1111/j.1365-246X.2006.03100.x \
+Paper        : [Panning and Romanowicz, 2006] https://doi.org/10.1111/j.1365-246X.2006.03100.x \
 Download link: http://ds.iris.edu/spud/earthmodel/10131202 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vs", "rho", "Qs", rename variable "vp" to "v".
 
 9. SAW642AN\_rho.nc\
-Paper        : https://doi.org/10.1111/j.1365-246X.2006.03100.x \
+Paper        : [Panning and Romanowicz, 2006] https://doi.org/10.1111/j.1365-246X.2006.03100.x \
 Download link: http://ds.iris.edu/spud/earthmodel/10131202 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vs", "vp", "Qs", rename variable "rho" to "v".
 
 10. SAW642AN\_qs.nc\
-Paper        : https://doi.org/10.1111/j.1365-246X.2006.03100.x \
+Paper        : [Panning and Romanowicz, 2006] https://doi.org/10.1111/j.1365-246X.2006.03100.x \
 Download link: http://ds.iris.edu/spud/earthmodel/10131202 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vs", "vp", "rho", rename variable "Qs" to "v".
 
 11. SAW642ANb\_vs.nc\
-Paper        : https://doi.org/10.1029/2010JB007520 \
+Paper        : [Panning and Romanowicz, 2010] https://doi.org/10.1029/2010JB007520 \
 Download link: http://ds.iris.edu/spud/earthmodel/10131193 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vp", "rho", "Qs", rename variable "vs" to "v".
 
 12. SAW642ANb\_vp.nc\
-Paper        : https://doi.org/10.1029/2010JB007520 \
+Paper        : [Panning and Romanowicz, 2010] https://doi.org/10.1029/2010JB007520 \
 Download link: http://ds.iris.edu/spud/earthmodel/10131193 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vs", "rho", "Qs", rename variable "vp" to "v".
 
 13. SAW642ANb\_rho.nc\
-Paper        : https://doi.org/10.1029/2010JB007520 \
+Paper        : [Panning and Romanowicz, 2010] https://doi.org/10.1029/2010JB007520 \
 Download link: http://ds.iris.edu/spud/earthmodel/10131193 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vs", "vp", "Qs", rename variable "rho" to "v".
 
 14. SAW642ANb\_qs.nc\
-Paper        : https://doi.org/10.1029/2010JB007520 \
+Paper        : [Panning and Romanowicz, 2010] https://doi.org/10.1029/2010JB007520 \
 Download link: http://ds.iris.edu/spud/earthmodel/10131193 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vs", "vp", "rho", rename variable "Qs" to "v".
 
 15. SAW24B16\_vs.nc\
-Paper        : https://doi.org/10.17611/DP/10131184 \
+Paper        : [Megnin and Romanowicz, 2000] https://doi.org/10.1046/j.1365-246X.2000.00298.x \
 Download link: http://ds.iris.edu/spud/earthmodel/10131184 (The netCDF binary for the above 2°x2° model expressed as S-velocity in km/s)\
 Changes      : rename variable "vsh" to "v".
 
 16. S362ANI\_vs.nc\
-Paper        : https://doi.org/10.1029/2007JB005169 \
+Paper        : [Kustowiski and Ekstrom, 2008] https://doi.org/10.1029/2007JB005169 \
 Download link: http://ds.iris.edu/spud/earthmodel/10131231 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vsv", "vsh", rename variable "vs" to "v".
 
 17. S362ANI\_vsv.nc\
-Paper        : https://doi.org/10.1029/2007JB005169 \
+Paper        : [Kustowiski and Ekstrom, 2008] https://doi.org/10.1029/2007JB005169 \
 Download link: http://ds.iris.edu/spud/earthmodel/10131231 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vs", "vsh", rename variable "vsv" to "v".
 
 18. S362ANI\_vsh.nc\
-Paper        : https://doi.org/10.1029/2007JB005169 \
+Paper        : [Kustowiski and Ekstrom, 2008] https://doi.org/10.1029/2007JB005169 \
 Download link: http://ds.iris.edu/spud/earthmodel/10131231 (the netCDF binary for the above model expressed in km/s)\
 Changes      : lose variables "vs", "vsv", rename variable "vsh" to "v".
 
