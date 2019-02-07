@@ -16,7 +16,7 @@ Dependencies are netcdf-4.6.1, GMT-5.4.4. See src/Makefile for details.
 Here are details about download sources and convertions to these nc files:
 
 1. GyPSum\_vs.nc\
-Paper        : https://doi.org/10.1029/2010JB007631\
+Paper        : https://doi.org/10.1029/2010JB007631 \
 Download link: http://ds.iris.edu/spud/earthmodel/10131119 (netCDF binary of S velocity expressed as km/s)\
 Changes      : rename variable "vs" to "v".
 
