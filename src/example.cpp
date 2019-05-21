@@ -2,23 +2,25 @@
 #include<sstream>
 #include<iomanip>
 
-#include<GMT.hpp>
+#include<ShellExec.hpp>
 #include<Tomography.hpp>
+//#include<GMT.hpp>
 
 using namespace std;
 
 int main(){
 
-    /*
+    string pwd=ShellExec("pwd");
+    pwd.pop_back(); // get rid of the trailing '\n' character.
 
     // Example 1. One value at request location (depth, lon, lat).
 
-    auto tomo=Tomography("/home/shule/Research/t062.WholeMantleTomographyModels.180912/SP12RTS_dvs.nc");
+    auto tomo=Tomography(pwd+"/../SP12RTS_dvs.nc");
     cout << tomo.GetValueAt(2343.5,253.03,-43.4) << endl;
 
-    */
-
-
+    /*
+    // A more complicated example, producing example.png.
+    // requires libgmt.o (GMT5)
 
     // Example 2. Plot depth slices for given models.
     vector<string> ModelNames={"GyPSuM_vp.nc","GyPSuM_vs.nc","HMSL-P06_dvp.nc","HMSL-P06_vp.nc","HMSL-S06_dvs.nc","HMSL-S06_vs.nc","LLNL-G3Dv3_dvp.nc","LLNL-G3Dv3_vp.nc","MITP08_dvp.nc","MITP08_vp.nc","S20RTS_dvs.nc","S362ANI+M_vsh.nc","S362ANI+M_vs.nc","S362ANI+M_vsv.nc","S362ANI_vsh.nc","S362ANI_vs.nc","S362ANI_vsv.nc","S362WMANI_vsh.nc","S362WMANI_vs.nc","S362WMANI_vsv.nc","S40RTS_dvs.nc","SAW24B16_vs.nc","SAW642ANb_qs.nc","SAW642ANb_rho.nc","SAW642ANb_vp.nc","SAW642ANb_vs.nc","SAW642AN_qs.nc","SAW642AN_rho.nc","SAW642AN_vp.nc","SAW642AN_vs.nc","SEISGLOB2_dvs.nc","SEMUCB-WM1_dvs.nc","SEMUCB-WM1_vsh.nc","SEMUCB-WM1_vs.nc","SEMUCB-WM1_vsv.nc","SEMum_vs.nc","SEMum_xi.nc","SGLOBE-rani_dvs.nc","SGLOBE-rani_vsh.nc","SGLOBE-rani_vsv.nc","SP12RTS_dvp.nc","SP12RTS_dvs.nc","SPani_dvp.nc","SPani_dvs.nc","SPani_phi.nc","SPani_vp.nc","SPani_vs.nc","SPani_xi.nc","TX2000_dvs.nc","TX2011_dvs.nc","TX2011_vs.nc"};
@@ -37,7 +39,7 @@ int main(){
         GMT::BeginPlot(outfile);
 
         // Read in tomograph model.
-        auto tomo=Tomography("/home/shule/Research/t062.WholeMantleTomographyModels.180912/"+ModelNames[i]);
+        auto tomo=Tomography(pwd+"/../"+ModelNames[i]);
         cout << "Plotting model: " << ModelNames[i] << " ..." << endl;
 
         size_t p=ModelNames[i].find_last_of("_")+1;
@@ -73,6 +75,7 @@ int main(){
         GMT::SealPlot(outfile);
     }
     remove("tmp.cpt");
+*/
     
     return 0;
 }
