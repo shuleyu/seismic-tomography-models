@@ -1,6 +1,6 @@
 # seismic-tomography-models
 
-![alt text](https://github.com/shuleyu/seismic-tomography-models/blob/master/src/example.png)
+![alt text](https://github.com/shuleyu/seismic-tomography-models/blob/master/src/example2.png)
 
 In this database, I collected several whole mantle tomography models.
 I converted them into nc files for conformity and easy-access.
@@ -12,6 +12,7 @@ The "v"alues could represent:
 - attenuation factor Q
 - anisotropic parameters
 - etc.
+
 Please refer to the file name and the comments within each nc files for the
 meaning of "v"alue.
 
