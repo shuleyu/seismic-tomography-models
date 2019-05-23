@@ -2,18 +2,26 @@
 
 ![alt text](https://github.com/shuleyu/seismic-tomography-models/blob/master/src/example.png)
 
-In this database, I collected several whole mantle tomography results, and
-converted them into nc files. Each nc files contain 4 variables: depth,
-longitude, latitude and "v". The "v"alues could represent S wave or P wave
-speed (in km/s), velocity purturbation (%), density (in kg/m^3), Q or
-anisotropic parameters, etc(See the comments within each nc files). The nc
-file name postfixes indicate which type of value it contains.
+In this database, I collected several whole mantle tomography models.
+I converted them into nc files for conformity and easy-access.
+Each nc files contain 4 variables: depth, longitude, latitude and "v".
+The "v"alues could represent:
+- S wave or P wave speed (in km/s)
+- S wave or P velocity purturbation (%)
+- density (in kg/m^3)
+- attenuation factor Q
+- anisotropic parameters
+- etc.
+Please refer to the file name and the comments within each nc files for the
+meaning of "v"alue.
 
-The c++ tools to read the nc files and linear interpolating to get value at
-request location are provided in src \
-Dependencies are netcdf-4.6.1, GMT-5.4.4. See src/Makefile for details.
+The c++ tools to read the nc files and to get value at
+certain location are provided in `src`
+Dependencies are 
+- netcdf-4.6.1
+- (optional, for plotting) GMT-5.4.4
 
-Here are details about download sources and convertions to these nc files:
+Here are some details about data sources and preprocessing to make these nc files:
 
 1. GyPSuM\_vs.nc\
 Paper        : [Simmons et al., 2010] https://doi.org/10.1029/2010JB007631 \

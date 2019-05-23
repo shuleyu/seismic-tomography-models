@@ -3,7 +3,7 @@ COMP      := c++ -std=c++14 -Wall
 OUTDIR    := .
 INCDIR    := -I./CPP-Library
 LIBDIR    := 
-LIBS      := -lnetcdf -lgmt
+LIBS      := -lnetcdf # -lgmt
 
 # all *cpp files
 SRCFILES  := $(wildcard *.cpp)
