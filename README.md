@@ -280,3 +280,7 @@ Paper        : [Tesoniero et al., 2015] https://doi.org/10.1002/2015JB012026 \
 Download link: http://ds.iris.edu/spud/earthmodel/10162642 (the netCDF binary for the above model)\
 Changes      : lose variables "dlnvp", "dlnvs", "vp", "vs", "xi", rename variable "phi" to "v". In paper it reads phi = (vpv^2/vph^2).
 
+52. GAP\_P4\_dvp.nc\
+Paper        : [Obayashi et al., 2013] https://doi.org/10.1002/2013GL057401 [Fukao and Obayashi, 2013] https://doi.org/10.1002/2013JB010466 \
+Download link: http://www.godac.jamstec.go.jp/catalog/data_catalog/metadataDisp/GAP_P4?lang=en
+Changes      : created GAP_P4.01 ~ GAP_P4.29, then doubled the depth layer. For example: 29 and 50.999 km get values from GAP_P4.01

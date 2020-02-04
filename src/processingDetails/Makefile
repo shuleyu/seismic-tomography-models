@@ -1,7 +1,7 @@
 
 COMP      := c++ -std=c++14 -Wall
 OUTDIR    := .
-INCDIR    := -I../CPP-Library
+INCDIR    := -I../CPP-Library-Headers
 LIBDIR    := 
 LIBS      := -lnetcdf
 

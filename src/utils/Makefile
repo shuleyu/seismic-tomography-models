@@ -1,9 +1,9 @@
 
 COMP      := c++ -std=c++14 -Wall
 OUTDIR    := .
-INCDIR    := -I../CPP-Library
-LIBDIR    := 
-LIBS      := -lnetcdf # -lgmt
+INCDIR    := -I/usr/local/include -I../CPP-Library-Headers
+LIBDIR    := -L/usr/local/lib
+LIBS      := -lnetcdf -lgmt
 
 # all *cpp files
 SRCFILES  := $(wildcard *.cpp)
