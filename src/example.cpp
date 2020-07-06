@@ -10,7 +10,7 @@ using namespace std;
 int main(){
 
     // which *.nc file to use.
-    auto tomo=Tomography("/Volumes/Homes/shuleyu/Documents/Research/t062.WholeMantleTomographyModels.180912/GAP_P4_dvp.nc");
+    auto tomo=Tomography("/Users/shuleyu/Documents/Research/t062.WholeMantleTomographyModels.180912/S40RTS_dvs.nc");
 
     // get dvs value at location (depth, lon, lat).
     cout << tomo.GetValueAt(2343.5,253.03,-87.5) << endl;
