@@ -1,0 +1,52 @@
+
+                                                      Reference model; Informations
+# 1. P wave speed
+
+
+SP12RTS_dvp.nc                                        PREM
+SPani_dvp.nc                                          PREM; "SPani_vp.nc" stores repeated infomation.
+HMSL-P06_dvp.nc                                       AK135; "HMSL-P06_vp.nc" is calculated from "HMSL-P06_dvp.nc" and AK135, but the paper mentioned the dvp may not suitable for travel time calculation.
+MITP08_dvp.nc                                         AK135; "MITP08_vp.nc" is calculated from "MITP08_dvp.nc" and AK135.
+LLNL-G3Dv3_dvp.nc                                     Layer mean; Use "LLNL-G3Dv3_vp.nc" to obtain dvp reference to PREM.
+GAP_P4_dvp.nc                                         ? (raw data is in %, may need to ask the authors, or read the paper more carefully)
+GyPSuM_vp.nc
+SAW642ANb_vp.nc
+SAW642AN_vp.nc
+
+
+#. 2. S wave speed.
+
+S20RTS_dvs.nc                                         PREM
+S40RTS_dvs.nc                                         PREM
+SP12RTS_dvs.nc                                        PREM
+SEISGLOB2_dvs.nc                                      PREM
+SGLOBE-rani_dvs.nc                                    PREM
+SPani_dvs.nc                                          PREM; "SPani_vs.nc" stores repeated infomation.
+HMSL-P06_dvs.nc                                       AK135; "HMSL-P06_vs.nc" is calculated from "HMSL-P06_dvs.nc" and AK135, but the paper mentioned the dvs may not suitable for travel time calculation.
+SEMUCB-WM1_dvs.nc                                     model.ref in downloaded package; "SEMUCB-WM1_vs.nc" is calculated as Voigt-average of "SEMUCB-WM1_vsh.nc" and "SEMUCB-WM1_vsv.nc".
+TX2000_dvs.nc                                         An average model (TNA and SNA for the upper mantle and PREM for the lower mantle.)
+TX2011_dvs.nc                                         TX2011_ref; "TX2011_vs.nc" is calculated from "TX2011_dvs.nc" and TX2011_ref. But I'm not sure about the "layer mean removed" description.
+GyPSuM_vs.nc
+SEMum_vs.nc
+S362ANI+M_vs.nc
+S362ANI_vs.nc
+S362WMANI_vs.nc
+SAW24B16_vs.nc
+SAW642ANb_vs.nc
+SAW642AN_vs.nc
+S362ANI+M_vsh.nc
+S362ANI+M_vsv.nc
+S362ANI_vsh.nc
+S362ANI_vsv.nc
+S362WMANI_vsh.nc
+S362WMANI_vsv.nc
+SEMUCB-WM1_vsh.nc
+SEMUCB-WM1_vsv.nc
+SGLOBE-rani_vsh.nc
+SGLOBE-rani_vsv.nc
+
+
+# 3. Density
+
+SAW642ANb_rho.nc
+SAW642AN_rho.nc
