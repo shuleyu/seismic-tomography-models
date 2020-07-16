@@ -1,7 +1,7 @@
 # seismic-tomography-models
 
 
-![alt text](https://github.com/shuleyu/seismic-tomography-models/blob/master/Summary.txt)
+![Summary](https://github.com/shuleyu/seismic-tomography-models/blob/master/Summary.txt)
 ![alt text](https://github.com/shuleyu/seismic-tomography-models/blob/master/src/utils/largePlot.png)
 
 In this database, I collected several whole mantle tomography models.
